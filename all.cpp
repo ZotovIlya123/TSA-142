@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-
+ 
 /**
  *@brief - Функция для вычисления A по заданному уравнению 
  *@param x - значение переменной x
