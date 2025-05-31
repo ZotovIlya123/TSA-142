@@ -36,7 +36,7 @@ void fillArray(int* arr, const size_t n);
  * @param n Размер массива
  * @return Максимальное отрицательное значение или -11 если таких элементов нет
  */
-void printArray(int* arr, const size_t n);
+void printArray(const int* arr, const size_t n);
 
 /**
  * @brief Считает количество положительных элементов, не превышающих A
@@ -45,7 +45,7 @@ void printArray(int* arr, const size_t n);
  * @param A Верхняя граница значений
  * @return Количество элементов удовлетворяющих условию
  */
-int countPositiveLessThanA(int* arr, const size_t n, const int A);
+int countPositiveLessThanA(const int* arr, const size_t n, const int A);
 
 /**
  * @brief Вычисляет сумму отрицательных элементов массива
@@ -61,7 +61,7 @@ int sumNeg(const int* arr, const size_t n);
  * @param n Размер массива
  * @return Индекс первого элемента пары или -1 если пара не найдена
  */
-int findLastPairWithDifferentSigns(int* arr, const size_t n);
+int findLastPairWithDifferentSigns(const int* arr, const size_t n);
 
 /**
 * @brief Перечисление для выбора способа заполнения данных
@@ -183,14 +183,14 @@ void fillArray(int* arr, size_t n)
     }
 }
 
-void printArray(int* arr, size_t n) 
+void printArray(const int* arr, size_t n) 
 {
     for (size_t i = 0; i < n; i++) 
         cout << arr[i] << " ";
     cout << endl;
 }
 
-int countPositiveLessThanA(int* arr, size_t n, int A) 
+int countPositiveLessThanA(const int* arr, size_t n, int A) 
 {
     int count = 0;
     for (size_t i = 0; i < n; i++) 
@@ -200,7 +200,7 @@ int countPositiveLessThanA(int* arr, size_t n, int A)
 }
 
 
-int findLastPairWithDifferentSigns(int* arr, size_t n) 
+int findLastPairWithDifferentSigns(const int* arr, size_t n) 
 {
     if (n < 2) 
         return -1;
